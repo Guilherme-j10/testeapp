@@ -17,7 +17,7 @@ export default function App() {
         hidden={false} 
         translucent={false} 
         barStyle="light-content" 
-        backgroundColor="#ff5c08" 
+        backgroundColor="#0264c7" 
       />
       <NavigationContainer >
         <Stack.Navigator initialRouteName="Home" screenOptions={{

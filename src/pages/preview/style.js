@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const colorStandard = {
-    corPincipal: '#ff5c08'
+    corPincipal: '#0264c7'
 }
 
 export const Main = styled.View`
@@ -11,7 +11,7 @@ export const Main = styled.View`
     padding: 20px;
     align-items: center;
     justify-content: flex-start;
-    background-color: #111;
+    background-color: #222;
 `;
 
 export const HeaderView = styled.View`
@@ -22,7 +22,13 @@ export const HeaderView = styled.View`
     flex-direction: row;
 `;
 
-export const ButtonBack = styled.TouchableOpacity``;
+export const ButtonBack = styled.TouchableOpacity`
+    width: 25px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+`;
 
 export const TextAnime = styled.Text`
     color: #fff;

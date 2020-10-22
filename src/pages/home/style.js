@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const colorStandard = {
-    corPincipal: '#ff5c08'
+    corPincipal: '#0264c7'
 }
 
 export const Main = styled.View`
@@ -11,16 +11,17 @@ export const Main = styled.View`
     padding: 20px;
     align-items: center;
     justify-content: flex-start;
-    background-color: #111;
+    background-color: #222;
 `;
 
 export const InputField = styled.TextInput`
     width: 100%;
-    background-color: #111;
-    border-radius: 50px;
-    border: solid 1px ${colorStandard.corPincipal};
-    padding: 12px 24px;
+    background-color: #222;
+    border-bottom-width: 1px;
+    border-bottom-color: ${colorStandard.corPincipal};
+    padding: 12px 10px;
     color: #fff;
+    flex: 1;
 `;
 
 export const ContainerButtons = styled.SafeAreaView`
@@ -95,12 +96,25 @@ export const TextHeader = styled.Text`
     font-size: 20px;
     font-weight: bold;
     margin-left: 10px;
-    color: #fff;
+    color: #fff;    
 `;
 
 export const LinkTo = styled.TouchableOpacity`
-    background-color: #ff5c08;
+    background-color: ${colorStandard.corPincipal};
     color: #fff;
     border-radius: 3px;
     padding: 6px 12px;
+`;
+
+export const ButtonMenu = styled.TouchableOpacity`
+    margin-right: 15px;
+`;
+
+export const ContainerMainHeader = styled.View`
+    width: 100%;
+    display: flex;
+    padding-right: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 `;

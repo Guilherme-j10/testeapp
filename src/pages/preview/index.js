@@ -19,12 +19,20 @@ import {
 } from './style';
 
 export default function Preview({ route, navigation }){
-    const { imageSource, animeName } = route.params;
+    const { 
+        imageSource, 
+        animeName,
+        tag,
+        lancamento,
+        votes,
+        pontuation
+    } = route.params;
+
     return (
         <Main>
             <HeaderView>
                 <ButtonBack onPress={() => navigation.goBack()}>
-                    <Ionicons name="ios-arrow-back" size={24} color="#ff5c08" />
+                    <Ionicons name="ios-arrow-back" size={24} color="#0264c7" />
                 </ButtonBack>
                 <TextAnime>
                     {animeName}
@@ -34,33 +42,33 @@ export default function Preview({ route, navigation }){
                 <ScrollIntern>
                     <ContainerAnime>
                         <ImageAnime 
-                            source={require('../../../src/assets/img/background.jpg')}
+                            source={imageSource}
                         />
                         <SideRight>
-                            <Pontuation>4.8</Pontuation>
+                            <Pontuation>{pontuation}</Pontuation>
                             <StarPontuation>
-                                <Ionicons style={{marginRight: 12}} name="md-star" size={24} color="#ff5c08" />
-                                <Ionicons style={{marginRight: 12}} name="md-star" size={24} color="#ff5c08" />
-                                <Ionicons style={{marginRight: 12}} name="md-star" size={24} color="#ff5c08" />
-                                <Ionicons style={{marginRight: 12}} name="md-star" size={24} color="#ff5c08" />
-                                <Ionicons name="md-star-half" size={24} color="#ff5c08" />
+                                <Ionicons style={{marginRight: 12}} name="md-star" size={24} color="#0264c7" />
+                                <Ionicons style={{marginRight: 12}} name="md-star" size={24} color="#0264c7" />
+                                <Ionicons style={{marginRight: 12}} name="md-star" size={24} color="#0264c7" />
+                                <Ionicons style={{marginRight: 12}} name="md-star" size={24} color="#0264c7" />
+                                <Ionicons name="md-star-half" size={24} color="#0264c7" />
                             </StarPontuation>
                             <VotesContainer>
                                 <FontAwesome5 style={{marginRight: 12}} name="user-alt" size={16} color="white" />
                                 <Votes>
-                                    210 votos
+                                    {votes}
                                 </Votes>
                             </VotesContainer>
                             <VotesContainer>
                                 <Entypo name="calendar" style={{marginRight: 12}} size={16} color="white" />
                                 <Votes>
-                                    Oct. 07, 2020
+                                    {lancamento}
                                 </Votes>
                             </VotesContainer>
                             <VotesContainer>
                                 <AntDesign style={{marginRight: 12}} name="tag" size={16} color="white" />
                                 <Votes>
-                                    Ação, Comédia, Fantasia, Magia, Shounen
+                                    {tag}
                                 </Votes>
                             </VotesContainer>
                         </SideRight>
